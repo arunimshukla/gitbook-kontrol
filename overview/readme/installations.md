@@ -61,14 +61,13 @@ The first installation of `kup` will take sometime. Check out the [kup-cheatshee
 
 Kontrol is also available as a Docker image, which can be used to run Kontrol without installing it on your host system. This is particularly useful for CI/CD pipelines or when you want to avoid local installation.
 
-To use the Kontrol Docker image:
+To use a specific Kontrol release, pull its image tag:
 
 ```bash
-# Pull the latest version
-docker pull runtimeverificationinc/kontrol
+docker pull runtimeverificationinc/kontrol:<tag>
 ```
 
-The Docker image includes all necessary dependencies and is automatically updated with each Kontrol release. You can find all available versions on [Docker Hub](https://hub.docker.com/r/runtimeverificationinc/kontrol).
+Image publication follows the Kontrol release process and may be performed manually. Check the [Kontrol releases](https://github.com/runtimeverification/kontrol/releases) page and [Docker Hub](https://hub.docker.com/r/runtimeverificationinc/kontrol) for available tags. Pin an explicit tag in CI rather than relying on an untagged `latest` image so that builds remain reproducible.
 
 #### CI Installation
 
